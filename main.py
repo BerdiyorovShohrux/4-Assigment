@@ -185,7 +185,7 @@ while True:
 #6-Misol
 sonlar = []
 
-for i in range(5):
+for i in range(10):
   son = int(input("Son kiriting: "))
   sonlar.append(son)
 
@@ -203,6 +203,53 @@ print(juft_kvadrat)
 
 
 
+
+#8-Misol
+maxsulotlar = ["sumka", "telefon", "kitob", "noutbuk"]
+narxlar = [50000, 3000000, 15000, 8000000]
+data = list(zip(maxsulotlar, narxlar))
+
+def qimmat(data):
+    return list(filter(lambda x: x[1] > 20000, data))
+
+
+def chegirma(narxlar):
+    return list(map(lambda x: x * 0.9, narxlar))
+
+
+def eng_qimmat_narx(data):
+    return max(data, key=lambda x: x[1]) #AI
+
+print("Qimmat mahsulotlar:", qimmat(data))
+print("Chegirmali narxlar:", chegirma(narxlar))
+print("Eng qimmat:", eng_qimmat_narx(data))
+
+
+
+#10-Misol
+names = ["Ali", "Vali", "Aziz", "Lola"]
+math = [80, 60, 90, 40]
+english = [70, 75, 85, 50]
+
+def urtachasi(names, math, english):
+    urtacha = list(map(lambda x, y: (x + y) / 2, math, english))
+    data = list(zip(names, urtacha))
+    return data
+
+def otgan_talabalar(data):
+    return list(filter(lambda x: x[1] > 70, data))
+
+def max_ball(data):
+    return max(data, key=lambda x: x[1])
+
+def info(data):
+    for student in data:
+        print(student[0], "average:", student[1])
+
+data = urtachasi(names, math, english)
+info(data)
+print("Passed: ", otgan_talabalar(data))
+print("Top: ", max_ball(data))
   
 
 
