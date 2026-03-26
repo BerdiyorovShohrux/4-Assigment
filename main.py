@@ -30,3 +30,83 @@ print("Minimal ball:", minimal_ball(grades))
 print("O'rtacha ball:", ortacha)
 print("O'tgan ballar:", yuqori60(grades))
 print("O'rtachadan yuqori:", ortachadan_yuqori(grades, ortacha))
+
+
+
+
+
+
+
+
+
+#2-Misol
+balans = 50000
+pin = 1103
+xatolik = 0
+
+def view():
+    global balans
+    return f"Sizning balansingiz {balans}so'm"
+
+
+def yechamiz():
+    global balans
+    return f"Sizning balansingiz {balans-yechish} so'm"
+
+
+def jonat():
+    global balans
+    return f"Sizning balansingiz {balans - summa} so'm"
+
+
+
+def yangi_pin():
+    global pin
+    return pin == yangi_pin
+
+
+print("Salom Pinkodni kiriting")
+pinkod = int(input(''))
+
+while True:
+    if pinkod == pin:
+        print("1.Balans \n2. Pul yechish \n3.Pul jo'natish \n4.Pinkodni almashtirish \n5.Chiqish")
+        tanlash = int(input())
+
+        if tanlash == 1:
+            print(view())
+
+        elif tanlash == 2:
+            print("Qancha pul yechasiz")
+            yechish = int(input())
+            if yechish <= balans and 0<yechish:
+                print(yechamiz())
+
+        elif tanlash == 3:
+            print("Qancha pul jo'natasiz")
+            summa = int(input())
+            if summa <= balans and 0<summa:
+                print(jonat())
+
+        elif tanlash == 4:
+            print("Yangi pinkodni kiriting")
+            yangi_pin = int(input())
+
+        elif tanlash == 5:
+            break 
+            
+#Bu misolni ishlagandim qo'shilgan narsalar -->>  xatolikni aniqlash va summa yechish va jo'natishdagi miqdori 0dan va asosiy balansdan kichik yoki kattaligini tekshirib funksiya ishlashini davom ettirish
+       
+        else:
+            xatolik += 1
+
+        if xatolik == 3:
+            print("Dastur to'xtadi, chunki bir nechta noto'g'ri tanlov qildingiz")
+            break
+    else:
+        xatolik += 1
+        print("Pinkodni kiriting")
+        continue
+    
+
+    
