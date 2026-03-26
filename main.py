@@ -139,6 +139,48 @@ def top_student(names, scores):
 ismi_bali(ism, ball)
 print("Top student:", top_student(ism, ball))
 
+
+
+
+
+#3-Misol
+Kitoblar = {
+    "matematika": 5,
+    "ona tili": 6,
+    "tarix": 4,
+    "fizika": 0,
+}
+def ruyhat():
+    for nomi, soni in Kitoblar.items():
+        print(nomi, soni, "ta")
+def qidirish1(qidirish):
+    if qidirish in Kitoblar:
+        if Kitoblar[qidirish] > 0:
+            print(f"Topildi: {qidirish} — {Kitoblar[qidirish]} ta bor")
+        else:
+            print("Hozir mavjud emas")
+    else:
+        print("Topilmadi")
+
+while True:
+  print("___________________")
+  print("1.Kitoblar ro'yhati")
+  print("2.Kitob qidirish")
+  print("3.Chiqish")
+  tanlash = int(input())
+  if tanlash == 1:
+    ruyhat()
+  elif tanlash == 2:
+    n = input("Kitob nomini kiriting: ").lower()
+    qidirish1(n)
+  elif tanlash == 3:
+    break
+  else:
+    print("Xatolik")
+  
+
+
+
     
 
     
