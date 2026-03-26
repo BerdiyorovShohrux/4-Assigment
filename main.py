@@ -177,6 +177,32 @@ while True:
     break
   else:
     print("Xatolik")
+
+
+
+
+
+#6-Misol
+sonlar = []
+
+for i in range(5):
+  son = int(input("Son kiriting: "))
+  sonlar.append(son)
+
+kvadrat = list(map(lambda x: x*x, sonlar))
+juft_sonlar = list(filter(lambda x: x % 2 == 0, sonlar))
+musbat_sonlar = list(filter(lambda x: x > 0, sonlar))
+katta50 = list(filter(lambda x: x > 50, sonlar))
+juft_kvadrat=(list(map(lambda x: x*x, juft_sonlar)))
+
+print(kvadrat)
+print(juft_sonlar)
+print(musbat_sonlar)
+print(katta50)
+print(juft_kvadrat)
+
+
+
   
 
 
