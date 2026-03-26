@@ -72,31 +72,24 @@ while True:
     if pinkod == pin:
         print("1.Balans \n2. Pul yechish \n3.Pul jo'natish \n4.Pinkodni almashtirish \n5.Chiqish")
         tanlash = int(input())
-
         if tanlash == 1:
             print(view())
-
         elif tanlash == 2:
             print("Qancha pul yechasiz")
             yechish = int(input())
             if yechish <= balans and 0<yechish:
                 print(yechamiz())
-
         elif tanlash == 3:
             print("Qancha pul jo'natasiz")
             summa = int(input())
             if summa <= balans and 0<summa:
                 print(jonat())
-
         elif tanlash == 4:
             print("Yangi pinkodni kiriting")
             yangi_pin = int(input())
-
         elif tanlash == 5:
             break 
-            
 #Bu misolni ishlagandim qo'shilgan narsalar -->>  xatolikni aniqlash va summa yechish va jo'natishdagi miqdori 0dan va asosiy balansdan kichik yoki kattaligini tekshirib funksiya ishlashini davom ettirish
-       
         else:
             xatolik += 1
 
@@ -107,6 +100,45 @@ while True:
         xatolik += 1
         print("Pinkodni kiriting")
         continue
+
+
+
+
+#4-Misol
+
+ism = []
+ball = []
+for i in range(5):
+    name = input(f"{i+1}.Ism: ")
+    score = int(input(f"{i+1}.Ball: "))
+    ism.append(name)
+    ball.append(score)
+  
+
+def ball_darajasi(ball):
+    if ball >= 90:
+        return "A"
+    elif ball >= 70:
+        return "B"
+    elif ball >= 60:
+        return "C"
+    else:
+        return "F"
+
+#
+def ismi_bali(ism, ball): #AI
+    for i in range(len(ism)): #AI
+        grade = ball_darajasi(ball[i]) #AI
+        print(ism[i], ball[i], grade) #AI
+#
+
+def top_student(names, scores):
+    max_ball = max(scores)
+    belgilash = scores.index(max_ball) #AI
+    return names[belgilash] #AI
+ismi_bali(ism, ball)
+print("Top student:", top_student(ism, ball))
+
     
 
     
