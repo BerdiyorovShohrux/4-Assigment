@@ -195,6 +195,10 @@ musbat_sonlar = list(filter(lambda x: x > 0, sonlar))
 katta50 = list(filter(lambda x: x > 50, sonlar))
 juft_kvadrat=(list(map(lambda x: x*x, juft_sonlar)))
 
+sonlar = [1,2,3,4,5,6]
+natija = list(map(lambda x: x*x, filter(lambda x: x % 2 == 0, sonlar)))
+print(natija)
+
 print(kvadrat)
 print(juft_sonlar)
 print(musbat_sonlar)
